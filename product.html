@@ -1,0 +1,524 @@
+---
+layout: null
+title: Phronix — Find the best card offer before you pay
+description: Phronix tells you which of your cards gives the biggest saving at any Sri Lankan merchant — before you tap or swipe.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:      #FFFFFF;
+    --text:    #161616;
+    --body:    #3A3A3A;
+    --muted:   #767676;
+    --faint:   #ABABAB;
+    --border:  #E8E8E8;
+    --surface: #F5F5F5;
+    --link:    #1D4ED8;
+    --accent:      #1D4ED8;
+    --accent-ink:  #0B1B4A;
+    --accent-soft: rgba(29, 78, 216, 0.08);
+    --spark:       #6E8FE0;
+    --never-text: #B91C1C;
+    --never-bg:   #FEF2F2;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:      #111111;
+      --text:    #EBEBEB;
+      --body:    #C8C8C8;
+      --muted:   #888888;
+      --faint:   #555555;
+      --border:  #282828;
+      --surface: #1A1A1A;
+      --link:    #60A5FA;
+      --accent:      #60A5FA;
+      --accent-ink:  #0B1B4A;
+      --accent-soft: rgba(96, 165, 250, 0.10);
+      --spark:       #8FB4FF;
+      --never-text: #F87171;
+      --never-bg:   #2D1515;
+    }
+  }
+
+  :root[data-theme="light"] {
+    --bg: #FFFFFF; --text: #161616; --body: #3A3A3A; --muted: #767676; --faint: #ABABAB;
+    --border: #E8E8E8; --surface: #F5F5F5; --link: #1D4ED8;
+    --accent: #1D4ED8; --accent-ink: #0B1B4A; --accent-soft: rgba(29, 78, 216, 0.08); --spark: #6E8FE0;
+    --never-text: #B91C1C; --never-bg: #FEF2F2;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #111111; --text: #EBEBEB; --body: #C8C8C8; --muted: #888888; --faint: #555555;
+    --border: #282828; --surface: #1A1A1A; --link: #60A5FA;
+    --accent: #60A5FA; --accent-ink: #0B1B4A; --accent-soft: rgba(96, 165, 250, 0.10); --spark: #8FB4FF;
+    --never-text: #F87171; --never-bg: #2D1515;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--body);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+  .serif {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
+  }
+
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ── Top bar ── */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .topbar nav { display: flex; gap: 1.5rem; }
+  .topbar nav a { font-size: 0.8125rem; color: var(--muted); }
+  .topbar nav a:hover { color: var(--text); text-decoration: none; }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4.5rem;
+    text-align: center;
+  }
+
+  .hero-canvas-wrap {
+    position: absolute;
+    inset: -4rem 0 auto 0;
+    height: 30rem;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  #spark-canvas { width: 100%; height: 100%; display: block; }
+
+  .hero-inner { position: relative; z-index: 1; }
+
+  .icon-plate {
+    position: relative;
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 0 auto 2rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .icon-glow {
+    position: absolute;
+    inset: -2.25rem;
+    background: radial-gradient(circle, var(--accent-ink) 0%, transparent 68%);
+    opacity: 0.16;
+    filter: blur(2px);
+  }
+
+  .icon-plate img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 22%;
+    box-shadow: 0 1.5rem 3rem -1rem rgba(11, 27, 74, 0.35);
+  }
+
+  .hero h1 {
+    font-size: clamp(2.1rem, 6vw, 3.15rem);
+    font-weight: normal;
+    color: var(--text);
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    max-width: 18ch;
+    margin: 0 auto 1.25rem;
+  }
+
+  .hero p.sub {
+    font-size: 1.125rem;
+    color: var(--muted);
+    max-width: 42ch;
+    margin: 0 auto 2.5rem;
+    text-wrap: balance;
+  }
+
+  .store-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .store-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 1px solid var(--border);
+    padding: 0.7rem 1.25rem;
+    font-size: 0.875rem;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  .store-pill .glyph {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+    color: var(--muted);
+  }
+
+  .store-pill .label { text-align: left; }
+  .store-pill .store-name { font-weight: 600; display: block; line-height: 1.3; }
+  .store-pill .soon {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--faint);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ── Section shell ── */
+  .section {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .section-head { max-width: 52ch; margin: 0 auto 2.75rem; text-align: center; }
+  .section-head .eyebrow { display: block; margin-bottom: 0.75rem; }
+  .section-head h2 {
+    font-size: clamp(1.5rem, 4vw, 1.85rem);
+    font-weight: normal;
+    color: var(--text);
+    text-wrap: balance;
+    line-height: 1.3;
+  }
+
+  /* ── How it works ── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .step { text-align: left; }
+
+  .step .num {
+    font-family: Georgia, serif;
+    font-size: 1.75rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    line-height: 1;
+  }
+
+  .step h3 { font-size: 1.0625rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+  .step p { font-size: 0.9375rem; color: var(--muted); line-height: 1.65; }
+
+  /* ── Feature grid ── */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .feature {
+    background: var(--bg);
+    padding: 2rem 1.75rem;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .feature h3::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    background: var(--spark);
+    border-radius: 1px;
+    flex-shrink: 0;
+    transform: translateY(-0.15rem) rotate(45deg);
+  }
+
+  .feature p { font-size: 0.9375rem; color: var(--muted); line-height: 1.65; }
+
+  /* ── Privacy strip ── */
+  .privacy-strip {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .privacy-box {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .privacy-box .never-tag {
+    display: inline-block;
+    background: var(--never-bg);
+    color: var(--never-text);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .privacy-box p {
+    font-size: 1.0625rem;
+    color: var(--body);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .privacy-box p strong { color: var(--text); }
+
+  .privacy-box .more { font-size: 0.9375rem; }
+
+  /* ── Footer ── */
+  .site-footer {
+    border-top: 1px solid var(--border);
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .site-footer .links { display: flex; gap: 1.25rem; }
+  .site-footer .links a { font-size: 0.8125rem; color: var(--muted); }
+  .site-footer .links a:hover { color: var(--text); text-decoration: none; }
+  .site-footer .copy { font-size: 0.75rem; color: var(--faint); letter-spacing: 0.03em; }
+
+  @media (max-width: 640px) {
+    .steps { grid-template-columns: 1fr; gap: 2.25rem; }
+    .features { grid-template-columns: 1fr; }
+    .section { padding: 3.5rem 1.5rem; }
+    .site-footer { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <span class="eyebrow">Phronix</span>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Privacy</a>
+    <a href="{{ '/tos.html' | relative_url }}">Terms</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-canvas-wrap"><canvas id="spark-canvas"></canvas></div>
+  <div class="hero-inner">
+    <div class="icon-plate">
+      <div class="icon-glow"></div>
+      <img src="{{ '/assets/icon.png' | relative_url }}" alt="Phronix app icon" width="512" height="512">
+    </div>
+    <h1 class="serif">Find the best card offer before you pay.</h1>
+    <p class="sub">Add the cards you own. Phronix matches live bank offers and hands you one ranked verdict — before you tap or swipe.</p>
+    <div class="store-row">
+      <div class="store-pill">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2.5"></rect><line x1="10" y1="18.5" x2="14" y2="18.5"></line></svg>
+        <span class="label"><span class="store-name">App Store</span><span class="soon">Coming soon</span></span>
+      </div>
+      <div class="store-pill">
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 3.5v17a.9.9 0 0 0 1.4.75l13.7-8.5a.9.9 0 0 0 0-1.5L5.4 2.75A.9.9 0 0 0 4 3.5Z"></path></svg>
+        <span class="label"><span class="store-name">Google Play</span><span class="soon">Coming soon</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="eyebrow">How it works</span>
+    <h2 class="serif">Three steps, no guesswork.</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="num">01</div>
+      <h3>Add your cards</h3>
+      <p>Tell Phronix which cards you carry — just the product, like "Commercial Bank Visa Signature." Never a card number.</p>
+    </div>
+    <div class="step">
+      <div class="num">02</div>
+      <h3>Search a merchant</h3>
+      <p>Type where you're shopping, or browse by category — dining, travel, shopping, groceries.</p>
+    </div>
+    <div class="step">
+      <div class="num">03</div>
+      <h3>Get the verdict</h3>
+      <p>Phronix ranks every matching offer by real savings and tells you exactly which card to use, right now.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+  <div class="section-head">
+    <span class="eyebrow">What you get</span>
+    <h2 class="serif">Everything a good decision needs.</h2>
+  </div>
+  <div class="features">
+    <div class="feature">
+      <h3>Live bank offers</h3>
+      <p>1,800+ active offers scraped from nine Sri Lankan banks, refreshed automatically in the background.</p>
+    </div>
+    <div class="feature">
+      <h3>Bill calculator</h3>
+      <p>Enter the amount on your bill and see the exact rupee saving — not just an advertised percentage.</p>
+    </div>
+    <div class="feature">
+      <h3>Saved offers</h3>
+      <p>Bookmark deals you want to remember, with reminders before they expire.</p>
+    </div>
+    <div class="feature">
+      <h3>Favourite merchants</h3>
+      <p>Star the places you shop often and get told the moment a new deal lands there.</p>
+    </div>
+    <div class="feature">
+      <h3>Category browsing</h3>
+      <p>Dining, shopping, travel, groceries and more — sorted by how much you'd actually save.</p>
+    </div>
+    <div class="feature">
+      <h3>Lock &amp; themes</h3>
+      <p>Fingerprint or face unlock, with light and dark themes that follow your system or stay put.</p>
+    </div>
+  </div>
+</section>
+
+<section class="privacy-strip">
+  <div class="privacy-box">
+    <span class="never-tag">Never collected</span>
+    <p><strong>Phronix never collects your card number, CVV, PIN, expiry date, banking credentials, OTPs, or transaction history.</strong> Only the name of the card product you own is ever stored.</p>
+    <p class="more"><a href="{{ '/' | relative_url }}">Read the full Privacy Policy →</a></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="links">
+    <a href="{{ '/' | relative_url }}">Privacy Policy</a>
+    <a href="{{ '/tos.html' | relative_url }}">Terms of Service</a>
+  </div>
+  <div class="copy">&copy; 2026 Athiththan &middot; Phronix is independent, not affiliated with any bank</div>
+</footer>
+
+<script>
+  (function () {
+    var canvas = document.getElementById('spark-canvas');
+    var ctx = canvas.getContext('2d');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w, h;
+
+    function resize() {
+      w = canvas.clientWidth;
+      h = canvas.clientHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var particleColor = isDark ? '143, 180, 255' : '110, 143, 224';
+
+    var particles = [];
+    var count = 26;
+    for (var i = 0; i < count; i++) {
+      particles.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 1.4 + 0.4,
+        vy: -(Math.random() * 0.12 + 0.03),
+        vx: (Math.random() - 0.5) * 0.05,
+        o: Math.random() * 0.35 + 0.08
+      });
+    }
+
+    function drawStatic() {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(function (p) {
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(' + particleColor + ',' + p.o + ')';
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    if (reduceMotion) {
+      drawStatic();
+      return;
+    }
+
+    function tick() {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(function (p) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.y < -10) { p.y = h + 10; p.x = Math.random() * w; }
+        if (p.x < -10) p.x = w + 10;
+        if (p.x > w + 10) p.x = -10;
+        ctx.beginPath();
+        ctx.fillStyle = 'rgba(' + particleColor + ',' + p.o + ')';
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  })();
+</script>
+
+</body>
+</html>
