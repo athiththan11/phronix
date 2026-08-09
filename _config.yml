@@ -1,7 +1,7 @@
 title: Phronix
 description: Privacy Policy
 url: "https://athiththan11.github.io"
-baseurl: "/phronix-site"
+baseurl: "/phronix"
 markdown: kramdown
 kramdown:
   input: GFM

@@ -45,7 +45,7 @@ Phronix is provided free of charge. We reserve the right to introduce optional p
 
 ## 4. Privacy and Data Protection
 
-Your privacy and the processing of your personal data are governed by our **[Privacy Policy](https://athiththan11.github.io/phronix-site/privacy/)**, which is incorporated into and forms part of these Terms. By accepting these Terms, you confirm that you have read and understood the Privacy Policy.
+Your privacy and the processing of your personal data are governed by our **[Privacy Policy](https://athiththan11.github.io/phronix/privacy/)**, which is incorporated into and forms part of these Terms. By accepting these Terms, you confirm that you have read and understood the Privacy Policy.
 
 Phronix processes personal data in accordance with the **Sri Lanka Personal Data Protection Act No. 9 of 2022 (PDPA)**. Details of what data we collect, how it is used, how long it is retained, your rights as a data subject, and how to exercise those rights are set out in the Privacy Policy.
 
@@ -55,7 +55,7 @@ Phronix processes personal data in accordance with the **Sri Lanka Personal Data
 
 ### 5.1 Account creation
 
-You must sign in with a Google account to use Phronix. By doing so, you grant Phronix access to your Google account email address and display name as described in our [Privacy Policy](https://athiththan11.github.io/phronix-site/privacy/).
+You must sign in with a Google account to use Phronix. By doing so, you grant Phronix access to your Google account email address and display name as described in our [Privacy Policy](https://athiththan11.github.io/phronix/privacy/).
 
 ### 5.2 Account responsibility
 
@@ -153,7 +153,7 @@ Phronix uses the following Google Firebase services, all governed by [Google's T
 | Firebase Analytics | Usage statistics and product improvement |
 | Google Sign-In | Authentication via Google account |
 
-Your personal data is stored and processed on Google's servers, primarily in the United States. This involves a cross-border transfer of personal data outside Sri Lanka. This transfer is conducted under appropriate safeguards — specifically, the Standard Contractual Clauses incorporated into Google's Data Processing Addendum. See our [Privacy Policy](https://athiththan11.github.io/phronix-site/privacy/) for full details.
+Your personal data is stored and processed on Google's servers, primarily in the United States. This involves a cross-border transfer of personal data outside Sri Lanka. This transfer is conducted under appropriate safeguards — specifically, the Standard Contractual Clauses incorporated into Google's Data Processing Addendum. See our [Privacy Policy](https://athiththan11.github.io/phronix/privacy/) for full details.
 
 We are not responsible for the availability, practices, or content of any third-party service.
 
@@ -219,7 +219,7 @@ No failure or delay by Phronix in enforcing any right under these Terms, and no 
 
 ## 17. Entire Agreement
 
-These Terms, together with our [Privacy Policy](https://athiththan11.github.io/phronix-site/privacy/), constitute the entire agreement between you and Phronix concerning the Service and supersede all prior representations, understandings, and agreements between the parties relating to the same subject matter.
+These Terms, together with our [Privacy Policy](https://athiththan11.github.io/phronix/privacy/), constitute the entire agreement between you and Phronix concerning the Service and supersede all prior representations, understandings, and agreements between the parties relating to the same subject matter.
 
 ---
 
