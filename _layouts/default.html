@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('phronix-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -59,11 +70,47 @@
     body {
       background: var(--bg);
       color: var(--body);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: 17px;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
     }
+
+    /* ── Theme toggle ── */
+    .theme-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.75rem;
+      height: 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--bg);
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
+    .theme-toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+    .theme-toggle svg { width: 1rem; height: 1rem; }
+
+    .theme-toggle .icon-sun { display: none; }
+    .theme-toggle .icon-moon { display: block; }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+      :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+    }
+
+    :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+    :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+    :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
     /* ── Header ── */
     .site-header {
@@ -83,8 +130,12 @@
       margin-bottom: 1.125rem;
     }
 
+    .wordmark a { color: inherit; text-decoration: none; }
+    .wordmark a:hover { color: var(--text); }
+    .wordmark a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
     .doc-title {
-      font-family: Georgia, "Times New Roman", Times, serif;
+      font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: clamp(1.65rem, 5vw, 2.25rem);
       font-weight: normal;
       color: var(--text);
@@ -262,9 +313,14 @@
 </head>
 <body>
 
+<button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle light and dark theme">
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+</button>
+
 <header class="site-header">
   <div class="site-header-inner">
-    <p class="wordmark">Phronix</p>
+    <p class="wordmark"><a href="{{ '/' | relative_url }}">Phronix</a></p>
     <h1 class="doc-title">{{ page.title | default: "Privacy Policy" }}</h1>
     <p class="doc-meta">
       <span>Effective {{ page.effective_date | default: "10 July 2026" }}</span>
@@ -287,6 +343,25 @@
 <footer class="site-footer">
   Phronix Privacy Policy &nbsp;&middot;&nbsp; Version {{ page.version | default: "1.1" }} &nbsp;&middot;&nbsp; &copy; 2026 Athiththan
 </footer>
+
+<script>
+  (function () {
+    var KEY = 'phronix-theme';
+    var root = document.documentElement;
+    function effectiveTheme() {
+      var attr = root.getAttribute('data-theme');
+      if (attr === 'light' || attr === 'dark') return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    });
+  })();
+</script>
 
 <script>
   document.querySelectorAll('.md-body table').forEach(function(t) {

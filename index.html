@@ -7,10 +7,21 @@ description: Phronix tells you which of your cards gives the biggest saving at a
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('phronix-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ page.title }}</title>
 <meta name="description" content="{{ page.description }}">
 <link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -69,7 +80,7 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   body {
     background: var(--bg);
     color: var(--body);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 17px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -81,7 +92,7 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 
   .serif {
-    font-family: Georgia, "Iowan Old Style", "Times New Roman", Times, serif;
+    font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 
   .eyebrow {
@@ -102,9 +113,41 @@ description: Phronix tells you which of your cards gives the biggest saving at a
     padding: 1.75rem 1.5rem;
   }
 
-  .topbar nav { display: flex; gap: 1.5rem; }
+  .topbar nav { display: flex; align-items: center; gap: 1.5rem; }
   .topbar nav a { font-size: 0.8125rem; color: var(--muted); }
   .topbar nav a:hover { color: var(--text); text-decoration: none; }
+
+  /* ── Theme toggle ── */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
+  .theme-toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+  .theme-toggle svg { width: 1rem; height: 1rem; }
+
+  .theme-toggle .icon-sun { display: none; }
+  .theme-toggle .icon-moon { display: block; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
+    :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
+  }
+
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
   /* ── Hero ── */
   .hero {
@@ -246,7 +289,7 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   .step { text-align: left; }
 
   .step .num {
-    font-family: Georgia, serif;
+    font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 1.75rem;
     color: var(--accent);
     margin-bottom: 0.75rem;
@@ -348,6 +391,7 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   .site-footer .copy { font-size: 0.75rem; color: var(--faint); letter-spacing: 0.03em; }
 
   @media (max-width: 640px) {
+    .topbar { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
     .steps { grid-template-columns: 1fr; gap: 2.25rem; }
     .features { grid-template-columns: 1fr; }
     .section { padding: 3.5rem 1.5rem; }
@@ -362,10 +406,14 @@ description: Phronix tells you which of your cards gives the biggest saving at a
 <body>
 
 <header class="topbar">
-  <span class="eyebrow">Phronix</span>
+  <a class="eyebrow" href="{{ '/' | relative_url }}">Phronix</a>
   <nav>
     <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
     <a href="{{ '/terms/' | relative_url }}">Terms</a>
+    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle light and dark theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+    </button>
   </nav>
 </header>
 
@@ -415,7 +463,7 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   </div>
 </section>
 
-<section class="section" style="padding-top: 0;">
+<section class="section">
   <div class="section-head">
     <span class="eyebrow">What you get</span>
     <h2 class="serif">Everything a good decision needs.</h2>
@@ -471,6 +519,25 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   </div>
   <div class="copy">&copy; 2026 Athiththan &middot; Phronix is independent, not affiliated with any bank</div>
 </footer>
+
+<script>
+  (function () {
+    var KEY = 'phronix-theme';
+    var root = document.documentElement;
+    function effectiveTheme() {
+      var attr = root.getAttribute('data-theme');
+      if (attr === 'light' || attr === 'dark') return attr;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    });
+  })();
+</script>
 
 <script>
   (function () {
