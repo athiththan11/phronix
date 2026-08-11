@@ -16,18 +16,20 @@ If you would like to delete your Phronix account and all associated data, follow
 
 ### Option 1 — Delete directly in the app (recommended)
 
-1. Open the **Phronix** app.
+1. Open the **Phronix** app and sign in.
 2. Tap **Profile** (bottom navigation bar).
-3. Tap **Sign out**, then uninstall the app from your device.
-4. To permanently remove your authentication record, visit [myaccount.google.com/permissions](https://myaccount.google.com/permissions), find **Phronix**, and revoke access.
+3. Tap **Delete account**.
+4. Confirm in the dialog that appears. This step is permanent and cannot be undone.
+
+This immediately deletes your account (Firebase Authentication record), your synced cards, saved offers, favourite merchants, and settings (Cloud Firestore), and clears the app's local data on your device. If you signed in a while ago, you may be asked to sign in again — with whichever of Google or Apple you originally used — before the deletion can complete; this is a Firebase security requirement, not an extra step we added.
 
 ### Option 2 — Email request
 
-Send a deletion request to **athiththan.kathir@gmail.com** with the subject line:
+If you no longer have access to the app, send a deletion request to **athiththan.kathir@gmail.com** with the subject line:
 
 > Phronix — Account Deletion Request
 
-Include the email address associated with your Phronix account. We will process your request within **7 business days**.
+Include the email address associated with your Phronix account. We will remove your account and all associated data from our active systems within **30 calendar days**.
 
 ---
 
@@ -35,15 +37,15 @@ Include the email address associated with your Phronix account. We will process 
 
 | Data | Action |
 |---|---|
-| Google Sign-In authentication record (Firebase Auth) | Permanently deleted |
-| Saved cards and offer preferences (Firestore) | Permanently deleted |
-| Analytics events (Firebase Analytics) | Deleted within 60 days per Google's retention policy |
-| Local app data (on-device SQLite database) | Deleted when the app is uninstalled |
+| Authentication record — Google or Apple Sign-In (Firebase Auth) | Permanently deleted |
+| Synced cards, saved offers, favourite merchants, and settings (Cloud Firestore) | Permanently deleted |
+| Local app data (on-device SQLite database) | Cleared immediately by in-app deletion, or removed when the app is uninstalled |
+| Analytics events (Firebase Analytics) | Deleted per Google's Firebase Analytics retention settings |
 
 ## What data is retained
 
-No personal data is retained after deletion. Phronix does not store payment information, card numbers, or transaction history at any time.
+No personal data is retained once the periods above have elapsed. Encrypted system backups may hold copies of deleted data for a short additional period before automated rotation removes them — see the [Privacy Policy]({{ '/privacy/' | relative_url }}) for details. Phronix does not store payment information, card numbers, or transaction history at any time.
 
 ---
 
-*Last updated: July 2026*
+*Last updated: 10 August 2026*

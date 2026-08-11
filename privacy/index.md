@@ -153,7 +153,7 @@ No third-party advertising, tracking, or analytics SDKs other than the Firebase 
 
 ### 7.1 Account deletion
 
-You can delete your account from **Profile → Delete account** in the app, or by emailing us at [athiththan.kathir@gmail.com](mailto:athiththan.kathir@gmail.com). We will action your request promptly and will remove your account and all directly associated personal data — including email address, display name, Firebase UID, card product list, saved offers, and FCM token — from our active database systems within **30 calendar days**.
+You can delete your account from **Profile → Delete account** in the app, or by emailing us at [athiththan.kathir@gmail.com](mailto:athiththan.kathir@gmail.com). We will action your request promptly and will remove your account and all directly associated personal data — including email address, display name, Firebase UID, card product list, saved offers, and FCM token — from our active database systems within **30 calendar days**. Full step-by-step instructions are on our [Account Deletion page]({{ '/delete-account.html' | relative_url }}).
 
 Encrypted system backups managed by Google Cloud may retain copies of deleted data for a further period before automated rotation removes them. This retention is governed by Google Cloud's backup practices and the data is inaccessible in production during this period. We have no mechanism to accelerate deletion from Google's infrastructure-level backups, but those backups are overwritten in the ordinary course of Google's operations.
 

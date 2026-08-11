@@ -63,7 +63,7 @@ You are responsible for maintaining the security of your device and Google accou
 
 ### 5.3 Account termination
 
-You may delete your account at any time from **Profile → Delete account** in the App. We may suspend or terminate your account if you breach these Terms, with or without prior notice.
+You may delete your account at any time from **Profile → Delete account** in the App — see our [Account Deletion page]({{ '/delete-account.html' | relative_url }}) for full instructions. We may suspend or terminate your account if you breach these Terms, with or without prior notice.
 
 ---
 
