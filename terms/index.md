@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Terms of Service
-effective_date: 17 July 2026
-updated_date: 17 July 2026
-version: "1.0"
+effective_date: 18 August 2026
+updated_date: 18 August 2026
+version: "1.1"
 description: Phronix Terms of Service — the rules and conditions that govern your use of the Phronix app.
 ---
 
@@ -15,7 +15,7 @@ These Terms form a legally binding agreement between you and Athiththan (individ
 
 You acknowledge that these Terms are formed electronically and that electronic acceptance constitutes a valid and binding agreement in accordance with the Sri Lanka **Electronic Transactions Act No. 19 of 2006**.
 
-The App is distributed through Google Play. Your download and installation of the App through Google Play is additionally subject to [Google Play's Terms of Service](https://play.google.com/intl/en_us/about/play-terms/).
+The App is distributed through Google Play and the Apple App Store. Your download and installation of the App through Google Play is additionally subject to [Google Play's Terms of Service](https://play.google.com/intl/en_us/about/play-terms/). Your download and installation of the App through the Apple App Store is additionally subject to the [Apple Media Services Terms and Conditions](https://www.apple.com/legal/internet-services/itunes/us/terms.html).
 
 ---
 

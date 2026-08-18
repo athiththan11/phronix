@@ -2,8 +2,8 @@
 layout: default
 title: Privacy Policy
 effective_date: 10 July 2026
-updated_date: 17 July 2026
-version: "1.1"
+updated_date: 18 August 2026
+version: "1.2"
 description: Phronix Privacy Policy — how we handle your personal data in the Phronix card offer discovery app.
 ---
 
@@ -51,6 +51,10 @@ We do **not** collect precise location data in the current version. If location 
 **Google Play Data Safety declaration**
 
 In accordance with Google Play Store requirements, Phronix maintains a Data Safety declaration in its Play Store listing. The Data Safety section accurately reflects the practices described in this policy. In the event of any inconsistency between the Data Safety declaration and this policy, this policy takes precedence. The following data types are declared as collected in the Data Safety form: email address, user IDs (Firebase UID), name (display name), app interactions (analytics events), and device or other IDs (Firebase Instance ID, FCM token). All collected data is required to provide the service, except analytics which are optional. Account data can be deleted by the user through the in-app deletion flow described in Section 7.1.
+
+**Apple App Store privacy details**
+
+In accordance with Apple App Store requirements, Phronix maintains App Privacy details ("privacy nutrition label") on its App Store product page. Those details accurately reflect the practices described in this policy. In the event of any inconsistency between the App Privacy details and this policy, this policy takes precedence. The declared data categories mirror those listed above: contact info (email address), identifiers (Firebase UID, FCM token, Firebase Instance ID), and usage data (analytics events). None of this data is used for third-party advertising or linked to your identity for advertising purposes. Account data can be deleted by the user through the in-app deletion flow described in Section 7.1.
 
 ---
 
