@@ -1,9 +1,13 @@
 title: Phronix
-description: Privacy Policy
+description: >-
+  Phronix tells you which of your cards gives the biggest saving at any
+  Sri Lankan merchant — before you tap or swipe.
 url: "https://athiththan11.github.io"
 baseurl: "/phronix"
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-plugins: []
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
