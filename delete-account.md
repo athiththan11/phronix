@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Delete Account — Phronix
+title: Delete Account
 description: How to request deletion of your Phronix account and data.
 ---
 
