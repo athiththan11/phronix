@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('phronix-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+<link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<style>
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+  .crumb { font-size: 0.8125rem; color: var(--muted); margin: 1.5rem 0 1.25rem; }
+  .crumb a { color: var(--muted); text-decoration: underline; }
+  .crumb a:hover { color: var(--text); }
+
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    text-wrap: balance;
+  }
+
+  .subtitle { color: var(--muted); font-size: 0.9375rem; margin-bottom: 0.5rem; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+
+  .direct-answer {
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 2rem;
+  }
+  .direct-answer-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+  }
+  .direct-answer p { color: var(--body); font-size: 0.9375rem; line-height: 1.6; }
+  .direct-answer strong { color: var(--text); }
+
+  .updated {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .offer-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+
+  .offer {
+    background: var(--bg);
+    padding: 1.125rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .offer-merchant { font-weight: 600; color: var(--text); font-size: 1rem; }
+  .offer-title { color: var(--muted); font-size: 0.875rem; margin-top: 0.2rem; }
+  .offer-value { color: var(--accent); font-weight: 700; font-size: 1rem; white-space: nowrap; }
+
+  .empty-note { color: var(--muted); font-size: 0.9375rem; padding: 1.5rem 0; }
+
+  .disclaimer { color: var(--muted); font-size: 0.8125rem; line-height: 1.6; margin-bottom: 2rem; }
+
+  .other-banks-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
+  .other-banks { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+  .other-banks a {
+    display: inline-block; font-size: 0.8125rem; color: var(--link);
+    border: 1px solid var(--border); border-radius: 999px; padding: 0.3rem 0.85rem;
+    text-decoration: none;
+  }
+  .other-banks a:hover { border-color: var(--link); color: var(--link); text-decoration: none; }
+
+  footer { border-top: 1px solid var(--border); padding-top: 1.5rem; font-size: 0.75rem; color: var(--muted); text-align: center; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+{% include topbar.html %}
+<div class="wrap">
+  <p class="crumb"><a href="{{ '/offers/' | relative_url }}">All bank offers</a> &rsaquo; {{ page.bank_name }}</p>
+
+  <h1>{{ page.bank_name }} Card Offers Today</h1>
+  <p class="subtitle">Every active {{ page.bank_name }} offer, ranked by saving — updated automatically from {{ page.bank_name }}'s own offers page.</p>
+  <div class="badges">
+    <span class="updated">Last checked {{ page.updated }}</span>
+    <span class="updated">{{ page.active_count }} active offers right now</span>
+  </div>
+
+  {% if page.offers.size > 0 %}
+  <div class="direct-answer">
+    <span class="direct-answer-label">Today's pick</span>
+    <p>As of {{ page.updated }}, the best {{ page.bank_name }} offer is <strong>{{ page.offers[0].value }} at {{ page.offers[0].merchant }}</strong> — {{ page.offers[0].title }}.</p>
+  </div>
+  {% endif %}
+
+  <a class="install-cta" href="{{ '/' | relative_url }}">
+    <strong>Don't just browse — get told which card to use.</strong>
+    <span>Phronix knows the cards you own and tells you the single best one for wherever you're paying. Free on Android and iPhone.</span>
+  </a>
+
+  {% if page.offers.size > 0 %}
+  <div class="offer-list">
+    {% for offer in page.offers %}
+    <div class="offer">
+      <div>
+        <div class="offer-merchant">{{ offer.merchant }}</div>
+        <div class="offer-title">{{ offer.title }}</div>
+      </div>
+      <div class="offer-value">{{ offer.value }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": {{ page.bank_name | append: " Card Offers" | jsonify }},
+    "itemListElement": [
+      {% for offer in page.offers %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "item": {
+          "@type": "Offer",
+          "name": {{ offer.merchant | jsonify }},
+          "description": {{ offer.title | jsonify }},
+          "category": {{ offer.value | jsonify }},
+          "seller": {
+            "@type": "BankOrCreditUnion",
+            "name": {{ page.bank_name | jsonify }}
+          }
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% else %}
+  <p class="empty-note">No active {{ page.bank_name }} offers found on the last check — check back soon.</p>
+  {% endif %}
+
+  <p class="disclaimer">Sourced automatically from {{ page.bank_name }}'s own published offers. Terms, minimum spend, and eligibility vary by offer — always verify with {{ page.bank_name }} before paying. Phronix never collects your card number, CVV, PIN, or transaction history.</p>
+
+  {% assign other_banks = site.pages | where: "layout", "bank-offers" | where_exp: "p", "p.url != page.url" | sort: "bank_name" %}
+  {% if other_banks.size > 0 %}
+  <p class="other-banks-label">Other banks</p>
+  <div class="other-banks">
+    {% for bp in other_banks %}
+    <a href="{{ bp.url | relative_url }}">{{ bp.bank_name }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <footer>
+    Phronix &nbsp;&middot;&nbsp; <a href="{{ '/' | relative_url }}">Home</a> &nbsp;&middot;&nbsp; <a href="{{ '/offers/' | relative_url }}">All Offers</a> &nbsp;&middot;&nbsp; <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+  </footer>
+</div>
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+</body>
+</html>
