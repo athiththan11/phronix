@@ -11,3 +11,16 @@ kramdown:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# jekyll-seo-tag's ImageDrop reads `page["image"]` per-page, not a bare
+# top-level site `image:` key — a bare key silently does nothing. This
+# `defaults` block is what actually applies it everywhere, via Jekyll's own
+# front-matter-defaults mechanism. Square app icon — fine for the default
+# `summary` Twitter/OG card; not a substitute for a proper 1200x630 landscape
+# card (needed for summary_large_image), which is a real design task, not a
+# config change.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/icon.png
