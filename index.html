@@ -211,6 +211,86 @@ description: Phronix tells you which of your cards gives the biggest saving at a
   .step h3 { font-size: 1.0625rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
   .step p { font-size: 0.9375rem; color: var(--muted); line-height: 1.65; }
 
+  /* ── Screenshot showcase ── */
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+
+  /* Capped at every breakpoint so a card reads as a phone, not a poster —
+     this is what keeps it from stretching full-width in the 1-column
+     mobile layout below. */
+  .showcase-card { text-align: center; max-width: 210px; margin: 0 auto; }
+
+  .showcase-frame {
+    position: relative;
+    border-radius: 1.75rem;
+    padding: 0.4rem;
+    background: #14141a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 1.5rem 3rem -1.25rem rgba(11, 27, 74, 0.35);
+    margin-bottom: 1.25rem;
+  }
+
+  .showcase-frame::before {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.1rem;
+    height: 0.25rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.35);
+    z-index: 2;
+  }
+
+  .showcase-frame img { display: block; width: 100%; height: auto; border-radius: 1.15rem; }
+
+  .showcase-card h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.35rem; }
+  .showcase-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.55; }
+
+  /* Screenshots switch with the viewer's theme, same mechanism as the
+     theme-toggle sun/moon icons in the shared stylesheet. */
+  .shot-dark { display: none; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .shot-light { display: none; }
+    :root:not([data-theme="light"]) .shot-dark { display: block; }
+  }
+  :root[data-theme="dark"] .shot-light { display: none; }
+  :root[data-theme="dark"] .shot-dark { display: block; }
+  :root[data-theme="light"] .shot-light { display: block; }
+  :root[data-theme="light"] .shot-dark { display: none; }
+
+  @media (max-width: 640px) {
+    .showcase-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  /* ── Feature callout — reuses .showcase-card/.showcase-frame so the
+     phone mockup stays a single component, just laid out beside text
+     instead of in the 3-up grid. ── */
+  .callout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.75rem;
+  }
+
+  .callout-media { flex: 0 0 auto; }
+  .callout-copy { flex: 1 1 auto; text-align: left; }
+  .callout-copy .eyebrow { display: block; margin-bottom: 0.75rem; }
+  .callout-copy h2 { margin-bottom: 0.75rem; text-wrap: balance; }
+  .callout-copy p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+
+  @media (max-width: 640px) {
+    .callout { flex-direction: column; text-align: center; padding: 2.25rem 1.5rem; }
+    .callout-copy { text-align: center; }
+  }
+
   /* ── Feature grid ── */
   .features {
     display: grid;
@@ -356,6 +436,57 @@ description: Phronix tells you which of your cards gives the biggest saving at a
       <div class="num">03</div>
       <h3>Get the verdict</h3>
       <p>Phronix ranks every matching offer by real savings and tells you exactly which card to use, right now.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="eyebrow">See it in action</span>
+    <h2 class="serif">This is what "which card" looks like.</h2>
+  </div>
+  <div class="showcase-grid">
+    <div class="showcase-card">
+      <div class="showcase-frame">
+        <img class="shot-light" src="{{ '/assets/screenshots/offers_light.webp' | relative_url }}" alt="Phronix offers screen listing live bank offers" loading="lazy" width="465" height="1044">
+        <img class="shot-dark" src="{{ '/assets/screenshots/offers_dark.webp' | relative_url }}" alt="Phronix offers screen listing live bank offers" loading="lazy" width="465" height="1044">
+      </div>
+      <h3>Browse everything, live</h3>
+      <p>Every active offer from every bank you use, ranked by saving and refreshed automatically.</p>
+    </div>
+    <div class="showcase-card">
+      <div class="showcase-frame">
+        <img class="shot-light" src="{{ '/assets/screenshots/verdict_light.webp' | relative_url }}" alt="Phronix best-card verdict screen showing the best card to use at Keells" loading="lazy" width="465" height="1044">
+        <img class="shot-dark" src="{{ '/assets/screenshots/verdict_dark.webp' | relative_url }}" alt="Phronix best-card verdict screen showing the best card to use at Keells" loading="lazy" width="465" height="1044">
+      </div>
+      <h3>Get your verdict</h3>
+      <p>Tell Phronix where you're shopping. It tells you exactly which card to use and how much you'll save.</p>
+    </div>
+    <div class="showcase-card">
+      <div class="showcase-frame">
+        <img class="shot-light" src="{{ '/assets/screenshots/detail_light.webp' | relative_url }}" alt="Phronix offer detail screen with full terms and a share button" loading="lazy" width="465" height="1044">
+        <img class="shot-dark" src="{{ '/assets/screenshots/detail_dark.webp' | relative_url }}" alt="Phronix offer detail screen with full terms and a share button" loading="lazy" width="465" height="1044">
+      </div>
+      <h3>Know what you're getting</h3>
+      <p>Full terms, eligible cards, and expiry — one tap away from the offer's own bank page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="callout">
+    <div class="callout-media">
+      <div class="showcase-card">
+        <div class="showcase-frame">
+          <img class="shot-light" src="{{ '/assets/screenshots/missed_card_light.webp' | relative_url }}" alt="Phronix verdict screen noting that a People's Bank card would get a better discount at this merchant" loading="lazy" width="465" height="1044">
+          <img class="shot-dark" src="{{ '/assets/screenshots/missed_card_dark.webp' | relative_url }}" alt="Phronix verdict screen noting that a People's Bank card would get a better discount at this merchant" loading="lazy" width="465" height="1044">
+        </div>
+      </div>
+    </div>
+    <div class="callout-copy">
+      <span class="eyebrow">Beyond the obvious</span>
+      <h2 class="serif">It'll even tell you when a card you don't own would do better.</h2>
+      <p>Every recommendation is checked against every active offer — not just the ones your cards qualify for. If a different card would clearly save you more, Phronix says so, plainly, right there in the verdict.</p>
     </div>
   </div>
 </section>
