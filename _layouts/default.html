@@ -12,104 +12,17 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% seo %}
+  <link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { line-height: 1.8; }
 
-    /* ── Tokens: light ── */
-    :root {
-      --bg:      #FFFFFF;
-      --text:    #161616;
-      --body:    #3A3A3A;
-      --muted:   #767676;
-      --faint:   #ABABAB;
-      --border:  #E8E8E8;
-      --surface: #F5F5F5;
-      --link:    #1D4ED8;
-      --never-text: #B91C1C;
-      --never-bg:   #FEF2F2;
-    }
-
-    /* ── Tokens: dark (OS preference) ── */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg:      #111111;
-        --text:    #EBEBEB;
-        --body:    #C8C8C8;
-        --muted:   #888888;
-        --faint:   #555555;
-        --border:  #282828;
-        --surface: #1A1A1A;
-        --link:    #60A5FA;
-        --never-text: #F87171;
-        --never-bg:   #2D1515;
-      }
-    }
-
-    /* ── Tokens: explicit theme overrides ── */
-    :root[data-theme="light"] {
-      --bg:      #FFFFFF; --text:    #161616; --body:    #3A3A3A;
-      --muted:   #767676; --faint:   #ABABAB; --border:  #E8E8E8;
-      --surface: #F5F5F5; --link:    #1D4ED8;
-      --never-text: #B91C1C; --never-bg: #FEF2F2;
-    }
-
-    :root[data-theme="dark"] {
-      --bg:      #111111; --text:    #EBEBEB; --body:    #C8C8C8;
-      --muted:   #888888; --faint:   #555555; --border:  #282828;
-      --surface: #1A1A1A; --link:    #60A5FA;
-      --never-text: #F87171; --never-bg: #2D1515;
-    }
-
-    /* ── Base ── */
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--body);
-      font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 17px;
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── Theme toggle ── */
-    .theme-toggle {
-      position: fixed;
-      top: 1.5rem;
-      right: 1.5rem;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.75rem;
-      height: 1.75rem;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: var(--bg);
-      color: var(--muted);
-      cursor: pointer;
-      padding: 0;
-    }
-
-    .theme-toggle:hover { color: var(--text); border-color: var(--muted); }
-    .theme-toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-    .theme-toggle svg { width: 1rem; height: 1rem; }
-
-    .theme-toggle .icon-sun { display: none; }
-    .theme-toggle .icon-moon { display: block; }
-
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-      :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-    }
-
-    :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-    :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-    :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
-    :root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+    /* This page's theme toggle floats top-right instead of sitting in a
+       topbar — legal pages have no nav row, just the doc header below. */
+    .theme-toggle { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 10; background: var(--bg); }
 
     /* ── Header ── */
     .site-header {
@@ -120,18 +33,9 @@
 
     .site-header-inner { max-width: 660px; margin: 0 auto; }
 
-    .wordmark {
-      font-size: 0.6875rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.125rem;
-    }
-
-    .wordmark a { color: inherit; text-decoration: none; }
-    .wordmark a:hover { color: var(--text); }
-    .wordmark a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+    /* .wordmark itself comes from the shared stylesheet — this only adds the
+       block spacing this standalone (non-topbar) placement needs. */
+    .site-header-inner .wordmark { display: inline-block; margin-bottom: 1.125rem; }
 
     .doc-title {
       font-family: 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -145,7 +49,7 @@
 
     .doc-meta {
       font-size: 0.75rem;
-      color: var(--faint);
+      color: var(--muted);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -297,7 +201,7 @@
       border-top: 1px solid var(--border);
       text-align: center;
       font-size: 0.6875rem;
-      color: var(--faint);
+      color: var(--muted);
       letter-spacing: 0.06em;
       padding: 2rem 1.5rem;
     }
@@ -319,15 +223,17 @@
 
 <header class="site-header">
   <div class="site-header-inner">
-    <p class="wordmark"><a href="{{ '/' | relative_url }}">Phronix</a></p>
-    <h1 class="doc-title">{{ page.title | default: "Privacy Policy" }}</h1>
+    <a class="wordmark" href="{{ '/' | relative_url }}">Phronix</a>
+    <h1 class="doc-title">{{ page.title }}</h1>
+    {% if page.effective_date or page.updated_date or page.version %}
     <p class="doc-meta">
-      <span>Effective {{ page.effective_date | default: "10 July 2026" }}</span>
-      <span class="sep">&middot;</span>
-      <span>Updated {{ page.updated_date | default: "17 July 2026" }}</span>
-      <span class="sep">&middot;</span>
-      <span>Version {{ page.version | default: "1.1" }}</span>
+      {% if page.effective_date %}<span>Effective {{ page.effective_date }}</span>{% endif %}
+      {% if page.effective_date and page.updated_date %}<span class="sep">&middot;</span>{% endif %}
+      {% if page.updated_date %}<span>Updated {{ page.updated_date }}</span>{% endif %}
+      {% if page.updated_date and page.version %}<span class="sep">&middot;</span>{% endif %}
+      {% if page.version %}<span>Version {{ page.version }}</span>{% endif %}
     </p>
+    {% endif %}
   </div>
 </header>
 
@@ -340,27 +246,10 @@
 </div>
 
 <footer class="site-footer">
-  Phronix Privacy Policy &nbsp;&middot;&nbsp; Version {{ page.version | default: "1.1" }} &nbsp;&middot;&nbsp; &copy; 2026 Athiththan
+  Phronix {{ page.title }}{% if page.version %} &nbsp;&middot;&nbsp; Version {{ page.version }}{% endif %} &nbsp;&middot;&nbsp; &copy; 2026 Athiththan
 </footer>
 
-<script>
-  (function () {
-    var KEY = 'phronix-theme';
-    var root = document.documentElement;
-    function effectiveTheme() {
-      var attr = root.getAttribute('data-theme');
-      if (attr === 'light' || attr === 'dark') return attr;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    document.querySelectorAll('[data-theme-toggle]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        try { localStorage.setItem(KEY, next); } catch (e) {}
-      });
-    });
-  })();
-</script>
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
 
 <script>
   document.querySelectorAll('.md-body table').forEach(function(t) {

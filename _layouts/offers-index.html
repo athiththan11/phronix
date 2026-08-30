@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('phronix-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% seo %}
+<link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+<style>
+  .wrap { max-width: 780px; margin: 0 auto; padding: 1.5rem 1.5rem 5rem; }
+
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    text-wrap: balance;
+  }
+
+  .subtitle { color: var(--muted); font-size: 0.9375rem; margin-bottom: 2rem; }
+
+  .bank-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+
+  .bank-row {
+    background: var(--bg);
+    padding: 1.125rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+  .bank-row:hover { background: var(--surface); text-decoration: none; }
+  .bank-name { font-weight: 600; color: var(--text); font-size: 1rem; }
+  .bank-count { color: var(--muted); font-size: 0.875rem; white-space: nowrap; }
+
+  .empty-note { color: var(--muted); font-size: 0.9375rem; padding: 1.5rem 0; }
+
+  footer { border-top: 1px solid var(--border); padding-top: 1.5rem; font-size: 0.75rem; color: var(--muted); text-align: center; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+{% include topbar.html %}
+<div class="wrap">
+  <h1>Live card offers, by bank</h1>
+  <p class="subtitle">Every page here is generated automatically from each bank's own published offers — pick a bank to see its current list, ranked by saving.</p>
+
+  <a class="install-cta" href="{{ '/' | relative_url }}">
+    <strong>Don't just browse — get told which card to use.</strong>
+    <span>Phronix knows the cards you own and tells you the single best one for wherever you're paying. Free on Android and iPhone.</span>
+  </a>
+
+  {% assign bank_pages = site.pages | where: "layout", "bank-offers" | sort: "bank_name" %}
+  {% if bank_pages.size > 0 %}
+  <div class="bank-list">
+    {% for bp in bank_pages %}
+    <a class="bank-row" href="{{ bp.url | relative_url }}">
+      <span class="bank-name">{{ bp.bank_name }}</span>
+      <span class="bank-count">{{ bp.active_count }} active offers &rarr;</span>
+    </a>
+    {% endfor %}
+  </div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Phronix bank offer pages",
+    "itemListElement": [
+      {% for bp in bank_pages %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "url": {{ bp.url | absolute_url | jsonify }},
+        "name": {{ bp.bank_name | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% else %}
+  <p class="empty-note">No bank pages published yet — check back soon.</p>
+  {% endif %}
+
+  <footer>
+    Phronix &nbsp;&middot;&nbsp; <a href="{{ '/' | relative_url }}">Home</a> &nbsp;&middot;&nbsp; <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+  </footer>
+</div>
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+</body>
+</html>
