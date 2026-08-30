@@ -3,7 +3,7 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-08-29"
+updated: "2026-08-30"
 active_count: 113
 offers:
   - merchant: "Ekho Safari"
