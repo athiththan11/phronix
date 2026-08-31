@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-08-30"
-active_count: 113
+updated: "2026-08-31"
+active_count: 98
 offers:
   - merchant: "Ekho Safari"
     title: "Up to 50% off on selected Best Available Rates for Full Board & Half Board stays for Amana Bank Debit Card Holders"
@@ -24,6 +24,9 @@ offers:
   - merchant: "Sennya Resorts Pvt. Ltd"
     title: "An overall discount of 35% on HB and FB basis for SGL, DBL, and TPL rooms, stays at Sennya Resorts, Belihuloya for Amana Bank Card Holders"
     value: "35% OFF"
+  - merchant: "Hotel Sigiriya"
+    title: "30% discount on room rate"
+    value: "30% OFF"
   - merchant: "Thaala Bentota"
     title: "30% discount on room rate"
     value: "30% OFF"
@@ -34,9 +37,6 @@ offers:
     title: "30% discount on room rate"
     value: "30% OFF"
   - merchant: "Occidental Eden Beruwala"
-    title: "30% discount on room rate"
-    value: "30% OFF"
-  - merchant: "Hotel Sigiriya"
     title: "30% discount on room rate"
     value: "30% OFF"
   - merchant: "Occidental Paradise Dambulla"
