@@ -3,8 +3,8 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-09-04"
-active_count: 528
+updated: "2026-09-05"
+active_count: 530
 offers:
   - merchant: "VILLA LABUGOLLA"
     title: "Up to 50% off on BB, HB & FB basis at Villa Labugolla, Hatharaliyadda"
@@ -57,13 +57,13 @@ offers:
   - merchant: "Royal Beach Hotel Hikkaduwa"
     title: "Up to 40% off on BB, FB and HB basis at Royal Beach Hotel Hikkaduwa"
     value: "40% OFF"
-  - merchant: "Wishing Tree Boutique Resort"
-    title: "35% off on HB & FB basis at Wishing Tree Boutique Resort"
-    value: "35% OFF"
   - merchant: "Sigiriana Resorts Dambulla"
     title: "35% off on HB & FB basis at Sigiriana Resorts Dambulla"
     value: "35% OFF"
-  - merchant: "KK Beach"
-    title: "35% off on BB, HB & FB basis at KK Beach"
+  - merchant: "The Royal Peak Resort, Ratnapura"
+    title: "35% off on BB, HB & FB basis at The Royal Peak Resort, Ratnapura"
+    value: "35% OFF"
+  - merchant: "Oak Ray Hotels & Resorts"
+    title: "Up to 35% off on HB & FB basis at Oak Ray Hotels & Resorts"
     value: "35% OFF"
 ---
