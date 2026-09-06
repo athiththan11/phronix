@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Seylan Card Offers Today"
 description: "Every active Seylan card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Seylan"
-updated: "2026-09-05"
-active_count: 159
+updated: "2026-09-06"
+active_count: 165
 offers:
   - merchant: "AMAARA HOTELS"
     title: "Up to 40% off or Seylan Credit & Debit Cards..."
@@ -57,13 +57,13 @@ offers:
   - merchant: "Balinese Ayu Spas"
     title: "Up to 30% off with your Seylan Cards..."
     value: "30% OFF"
-  - merchant: "OPAL"
-    title: "25% off on total bill for Credit & 10% off for Debit Cards..."
-    value: "25% OFF"
-  - merchant: "Theta Lounge"
-    title: "25% off for Seylan Visa Infinite Credit Cards..."
+  - merchant: "COOL PLANET"
+    title: "25% off on Total Bill for Credit Cards, 10% off on Total Bill for Debit Cards..."
     value: "25% OFF"
   - merchant: "ORIENT HOTEL BANDARAWELA"
     title: "Up to 25% off on Room Rates with your Seylan Cards..."
+    value: "25% OFF"
+  - merchant: "Theta Lounge"
+    title: "25% off for Seylan Visa Infinite Credit Cards..."
     value: "25% OFF"
 ---
