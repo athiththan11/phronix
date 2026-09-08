@@ -3,12 +3,18 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-07"
-active_count: 21
+updated: "2026-09-08"
+active_count: 23
 offers:
   - merchant: "Laya Safari Army Welfare Holiday Resort"
     title: "20% discount on Double Rooms (DBL) and Triple Rooms (TPL)"
     value: "25% OFF"
+  - merchant: "Club Palm Bay, Marawila"
+    title: "22% off for Amana Bank Debit Card Holders"
+    value: "22% OFF"
+  - merchant: "KEELLS"
+    title: "Spend LKR 10,000 and get a 20% off the total bill at Keells Supermarkets"
+    value: "20% OFF"
   - merchant: "Luxor Kirindi Ella"
     title: "20% Discount on Bed & Breakfast (BB) stays & Additional 20% Discount on all spa treatments at our in-house spa for Amana Bank Debit Card holders"
     value: "20% OFF"
@@ -59,11 +65,5 @@ offers:
     value: "Special offer"
   - merchant: "CircleDNA"
     title: "52% off CircleDNA Premium DNA test kit"
-    value: "Special offer"
-  - merchant: "Visa Sri Lanka Offers"
-    title: "Explore a world of exclusive privileges with your VISA Debit Card across leading local merchants, bringing you rewarding dining, lifestyle, and shopping experiences."
-    value: "Special offer"
-  - merchant: "Visa Global Offers"
-    title: "Explore a world of exclusive privileges with your VISA Debit Card around the globe, bringing you rewarding travel, dining, lifestyle, and shopping experiences wherever you go."
     value: "Special offer"
 ---
