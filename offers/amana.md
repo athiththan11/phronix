@@ -3,9 +3,12 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-08"
-active_count: 23
+updated: "2026-09-09"
+active_count: 24
 offers:
+  - merchant: "Tony Pelle"
+    title: "30% off Instore & Online for Amana Bank Holders"
+    value: "30% OFF"
   - merchant: "Laya Safari Army Welfare Holiday Resort"
     title: "20% discount on Double Rooms (DBL) and Triple Rooms (TPL)"
     value: "25% OFF"
@@ -62,8 +65,5 @@ offers:
     value: "Special offer"
   - merchant: "Travel googoo"
     title: "Unlimited global messaging, data voice calls and photo sharing when you travel"
-    value: "Special offer"
-  - merchant: "CircleDNA"
-    title: "52% off CircleDNA Premium DNA test kit"
     value: "Special offer"
 ---
