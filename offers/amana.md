@@ -3,9 +3,12 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-09"
-active_count: 24
+updated: "2026-09-10"
+active_count: 25
 offers:
+  - merchant: "The Royal Peak Resort"
+    title: "The Royal Peak Resort offer"
+    value: "35% OFF"
   - merchant: "Tony Pelle"
     title: "30% off Instore & Online for Amana Bank Holders"
     value: "30% OFF"
@@ -62,8 +65,5 @@ offers:
     value: "10% OFF"
   - merchant: "LOTTE DUTY FREE"
     title: "Up to S$50 off with min. spend at Lotte Duty Free Singapore with your Visa Infinite or Visa Signature card"
-    value: "Special offer"
-  - merchant: "Travel googoo"
-    title: "Unlimited global messaging, data voice calls and photo sharing when you travel"
     value: "Special offer"
 ---
