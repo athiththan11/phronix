@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-11"
-active_count: 25
+updated: "2026-09-12"
+active_count: 24
 offers:
   - merchant: "The Royal Peak Resort"
     title: "The Royal Peak Resort offer"
@@ -18,9 +18,6 @@ offers:
   - merchant: "Club Palm Bay, Marawila"
     title: "22% off for Amana Bank Debit Card Holders"
     value: "22% OFF"
-  - merchant: "KEELLS"
-    title: "Spend LKR 10,000 and get a 20% off the total bill at Keells Supermarkets"
-    value: "20% OFF"
   - merchant: "Luxor Kirindi Ella"
     title: "20% Discount on Bed & Breakfast (BB) stays & Additional 20% Discount on all spa treatments at our in-house spa for Amana Bank Debit Card holders"
     value: "20% OFF"
@@ -65,5 +62,8 @@ offers:
     value: "10% OFF"
   - merchant: "LOTTE DUTY FREE"
     title: "Up to S$50 off with min. spend at Lotte Duty Free Singapore with your Visa Infinite or Visa Signature card"
+    value: "Special offer"
+  - merchant: "Travel googoo"
+    title: "Unlimited global messaging, data voice calls and photo sharing when you travel"
     value: "Special offer"
 ---
