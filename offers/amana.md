@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-15"
-active_count: 26
+updated: "2026-09-16"
+active_count: 32
 offers:
   - merchant: "The Royal Peak Resort"
     title: "The Royal Peak Resort offer"
@@ -18,6 +18,9 @@ offers:
   - merchant: "Club Palm Bay, Marawila"
     title: "22% off for Amana Bank Debit Card Holders"
     value: "22% OFF"
+  - merchant: "Elegant Charms"
+    title: "20% Off on the Total Bill for Amana bank Debit card holders"
+    value: "20% OFF"
   - merchant: "Luxor Kirindi Ella"
     title: "20% Discount on Bed & Breakfast (BB) stays & Additional 20% Discount on all spa treatments at our in-house spa for Amana Bank Debit Card holders"
     value: "20% OFF"
@@ -63,7 +66,4 @@ offers:
   - merchant: "Crazy Jets"
     title: "15% off on the base fare for Amana Bank Debit Card Holders"
     value: "15% OFF"
-  - merchant: "RISIS"
-    title: "10% off on selected handcrafted items"
-    value: "10% OFF"
 ---
