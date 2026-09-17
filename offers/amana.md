@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-16"
-active_count: 32
+updated: "2026-09-17"
+active_count: 33
 offers:
   - merchant: "The Royal Peak Resort"
     title: "The Royal Peak Resort offer"
@@ -45,6 +45,9 @@ offers:
   - merchant: "TKS KIDS"
     title: "15% on bills below 25,000/= for Amana Bank Debit Card Holders"
     value: "15% OFF"
+  - merchant: "Ceylon City Mart- Hidayath"
+    title: "15% discount on the Bill for the Fashion and Retail sections (1st, 2nd, & 3rd floors) for Amana Bank Debit card holders."
+    value: "15% OFF"
   - merchant: "MUSEUM OF ICE CREAM"
     title: "15% off Museum of Ice Cream Singapore tickets when you buy 4 tickets and more"
     value: "15% OFF"
@@ -62,8 +65,5 @@ offers:
     value: "15% OFF"
   - merchant: "Earl's Regency, Kandy"
     title: "Earl's Regency, Kandy offer"
-    value: "15% OFF"
-  - merchant: "Crazy Jets"
-    title: "15% off on the base fare for Amana Bank Debit Card Holders"
     value: "15% OFF"
 ---
