@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Terms of Service
-effective_date: 18 August 2026
-updated_date: 18 August 2026
-version: "1.1"
+effective_date: 19 September 2026
+updated_date: 19 September 2026
+version: "1.2"
 description: Phronix Terms of Service — the rules and conditions that govern your use of the Phronix app.
 ---
 
@@ -133,11 +133,15 @@ Subject to your compliance with these Terms, Phronix grants you a limited, non-e
 
 The App, its design, source code, and the compilation and presentation of offer and merchant data are owned by or licensed to Athiththan (Phronix) and are protected by applicable intellectual property laws, including the Sri Lanka **Intellectual Property Act No. 36 of 2003**. Phronix claims intellectual property protection over the selection, organisation, and presentation of offer and merchant information — not over the underlying factual content of individual offers or the names and trademarks of the relevant banks and merchants.
 
-You may not reproduce, distribute, or create derivative works from any part of the Service without our express written permission.
+You may not reproduce, distribute, or create derivative works from any part of the Service without our express written permission. This does not limit any rights you have under the licence of the third-party data described in Section 9.4.
 
 ### 9.3 Your content
 
 You do not submit any original content to Phronix. The card product names you enter are standard financial product names and are not your original works. We do not claim ownership over any data you provide.
+
+### 9.4 Third-party data: OpenStreetMap
+
+Merchant locations in the App are derived from OpenStreetMap data, © OpenStreetMap contributors, available under the [Open Database Licence (ODbL)](https://opendatacommons.org/licenses/odbl/1-0/) — see [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright). The App's merchant location database is itself a derivative database and is made available under the ODbL on our [Open Data page]({{ '/open-data/' | relative_url }}); you may reuse it under those terms, notwithstanding Section 9.2.
 
 ---
 
@@ -149,7 +153,7 @@ Phronix uses the following Google Firebase services, all governed by [Google's T
 |---|---|
 | Firebase Authentication | Account creation and sign-in |
 | Cloud Firestore | Sync of card list, saved offers, preferences |
-| Firebase Cloud Messaging | Push notifications |
+| Firebase Remote Config | App update prompts and feature switches |
 | Firebase Analytics | Usage statistics and product improvement |
 | Google Sign-In | Authentication via Google account |
 
@@ -228,7 +232,6 @@ These Terms, together with our [Privacy Policy](https://athiththan11.github.io/p
 We may update these Terms from time to time. When we make material changes, we will:
 
 - Update the **Last updated** date at the top of this page
-- Send a **push notification** to active users
 - Display an **in-app notice** on the next launch after the change
 
 For material changes that affect your rights or introduce new obligations, continued use of the App after the stated effective date constitutes acceptance. If you do not agree to the updated Terms, you must stop using the App and delete your account.
