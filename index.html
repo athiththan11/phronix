@@ -269,6 +269,8 @@ description: Phronix tells you which of your cards gives the biggest saving at a
     padding: 2.75rem;
   }
 
+  .callout-reverse { flex-direction: row-reverse; }
+
   .callout-media { flex: 0 0 auto; }
   .callout-copy { flex: 1 1 auto; text-align: left; }
   .callout-copy .eyebrow { display: block; margin-bottom: 0.75rem; }
@@ -475,6 +477,24 @@ description: Phronix tells you which of your cards gives the biggest saving at a
       <span class="eyebrow">Beyond the obvious</span>
       <h2 class="serif">It'll even tell you when a card you don't own would do better.</h2>
       <p>Every recommendation is checked against every active offer — not just the ones your cards qualify for. If a different card would clearly save you more, Phronix says so, plainly, right there in the verdict.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="callout callout-reverse">
+    <div class="callout-media">
+      <div class="showcase-card">
+        <div class="showcase-frame">
+          <img class="shot-light" src="{{ '/assets/screenshots/savings_light.webp' | relative_url }}" alt="Phronix Savings screen: a running total saved this year, a breakdown by card, and this week's activity" loading="lazy" width="465" height="1044">
+          <img class="shot-dark" src="{{ '/assets/screenshots/savings_dark.webp' | relative_url }}" alt="Phronix Savings screen: a running total saved this year, a breakdown by card, and this week's activity" loading="lazy" width="465" height="1044">
+        </div>
+      </div>
+    </div>
+    <div class="callout-copy">
+      <span class="eyebrow">Track what you save</span>
+      <h2 class="serif">Watch the savings add up.</h2>
+      <p>Mark an offer as used and Phronix adds the saving to a running total for the year — broken down by card, with a look at this week's activity. It's an estimate, based only on the offers you tell it you've used.</p>
     </div>
   </div>
 </section>
