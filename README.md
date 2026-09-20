@@ -9,8 +9,10 @@ Phronix is a mobile app that helps you decide which card to use, right when it m
 - **Live bank offers** — hundreds of active promotions from Sri Lanka's leading banks, refreshed automatically.
 - **Bill calculator** — enter the amount on your bill and see the exact rupee saving, not just an advertised percentage.
 - **Saved offers** — bookmark deals you want to remember, with reminders before they expire.
+- **Savings tracker** — mark an offer as used and Phronix keeps a running total of what you've saved this year, broken down by card, with a quick look at this week's activity.
 - **Favourite merchants** — star the places you shop often and get told the moment a new deal lands there.
 - **Category browsing** — dining, travel, shopping, groceries, and more, sorted by how much you'd actually save.
+- **Home-screen widget** — your best card and saving, right on your home screen on Android and iPhone; pin it to a category, one of your cards, your saved offers, or your favourite merchants.
 - **Lock & themes** — fingerprint or face unlock, with light and dark themes that follow your system or stay put.
 
 ## Privacy, by design
