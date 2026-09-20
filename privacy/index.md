@@ -98,7 +98,7 @@ We do not rely on consent as the lawful basis for account creation or core servi
 
 Your email and User ID are used to maintain your account and sync your card list, saved offers, and preferences across your devices. Your card product names are used exclusively to power the recommendation engine — identifying which of your cards has the best active offer at a given merchant.
 
-All authentication is handled by Google Sign-In. Phronix does not send emails to you and has no access to your Google account password.
+All authentication is handled by Google Sign-In. Phronix does not send you marketing or promotional emails, and has no access to your Google account password. The only emails we send are ones about your account — such as the notice before an inactive account is deleted (Section 7.2) or a reply to a request you make.
 
 ### 5.2 Notifications
 
@@ -167,10 +167,7 @@ Note: deleting your Phronix account does not affect your Google account. Manage 
 
 Accounts with no recorded activity (sign-in, card list update, saved offer interaction) for **24 consecutive months** are considered inactive.
 
-Before any inactive account is deleted, we will send:
-
-- An **email** to the address registered with your account, at least **30 days** before the scheduled deletion date.
-- An **in-app push notification** (if notifications are enabled for Phronix on your device) at the same time.
+Before any inactive account is deleted, we will send an **email** to the address registered with your account, at least **30 days** before the scheduled deletion date. Phronix does not send push notifications, so email is the only notice channel.
 
 If you do not sign in within the 30-day notice period, the account and all associated personal data will be deleted. To prevent deletion, simply open the app and sign in before the date stated in the notice. If you no longer have access to your registered email address and miss the notice, contact us at [athiththan.kathir@gmail.com](mailto:athiththan.kathir@gmail.com) before deletion to discuss recovery options.
 
