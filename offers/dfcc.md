@@ -3,7 +3,7 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-09-24"
+updated: "2026-09-25"
 active_count: 191
 offers:
   - merchant: "Chularat 3 International Hospital"
