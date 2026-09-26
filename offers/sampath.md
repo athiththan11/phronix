@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-09-25"
-active_count: 119
+updated: "2026-09-26"
+active_count: 118
 offers:
   - merchant: "Villa Labugolla"
     title: "For all Sampath Mastercard, Visa Credit/Debit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
@@ -54,7 +54,7 @@ offers:
   - merchant: "KK Beach Galle by KK Collection"
     title: "For all Sampath Mastercard, Visa Credit & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
     value: "35% OFF"
-  - merchant: "Araliya Green Hills"
+  - merchant: "Araliya Red"
     title: "For all Sampath Mastercard, Visa Credit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
     value: "30% OFF"
   - merchant: "Mandara Rosen Kataragama"
