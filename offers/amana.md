@@ -3,7 +3,7 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-27"
+updated: "2026-09-28"
 active_count: 49
 offers:
   - merchant: "The Royal Peak Resort"
