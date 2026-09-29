@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-09-28"
-active_count: 115
+updated: "2026-09-29"
+active_count: 116
 offers:
   - merchant: "Villa Labugolla"
     title: "For all Sampath Mastercard, Visa Credit/Debit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
@@ -36,11 +36,11 @@ offers:
   - merchant: "Amaara Sky Hotel"
     title: "For all Sampath Mastercard and Visa Credit Cards."
     value: "40% OFF"
-  - merchant: "Mount Randholee Resorts & Spa,Kandy"
-    title: "For all Sampath Mastercard & Visa Credit/Debit Cards."
-    value: "40% OFF"
   - merchant: "Hilton Yala Resort"
     title: "For All Sampath Bank Visa Infinite Metal and Visa Infinite Credit Cardholders"
+    value: "40% OFF"
+  - merchant: "Mount Randholee Resorts & Spa,Kandy"
+    title: "For all Sampath Mastercard & Visa Credit/Debit Cards."
     value: "40% OFF"
   - merchant: "Newburgh Ella"
     title: "For All Sampath Bank Visa Infinite Metal, Visa Infinite, Visa Signature, Mastercard World Credit Cardholders and Sampath Bank American Express® Platinum Ultramiles Cardmembers"
@@ -63,7 +63,7 @@ offers:
   - merchant: "The Radh"
     title: "For all Sampath Mastercard Credit and Debit Cards"
     value: "30% OFF"
-  - merchant: "Kahanda Kanda Galle by KK Collection"
-    title: "For all Sampath Mastercard, Visa Credit & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
+  - merchant: "PickMe"
+    title: "For all Sampath Mastercard, Visa Credit & Debit Cardholders"
     value: "30% OFF"
 ---
