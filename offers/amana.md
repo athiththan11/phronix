@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-29"
-active_count: 49
+updated: "2026-09-30"
+active_count: 50
 offers:
   - merchant: "The Royal Peak Resort"
     title: "The Royal Peak Resort offer"
@@ -57,8 +57,8 @@ offers:
   - merchant: "Hertz"
     title: "Complimentary status upgrade, and up to 15% off car rentals and chauffer services"
     value: "15% OFF"
-  - merchant: "MUSEUM OF ICE CREAM"
-    title: "15% off Museum of Ice Cream Singapore tickets when you buy 4 tickets and more"
+  - merchant: "Nawaloka Hospitals"
+    title: "15% off on Lab test (Both OPD ECG)"
     value: "15% OFF"
   - merchant: "TKS KIDS"
     title: "15% on bills below 25,000/= for Amana Bank Debit Card Holders"
