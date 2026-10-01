@@ -3,17 +3,14 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-09-30"
-active_count: 50
+updated: "2026-10-01"
+active_count: 48
 offers:
   - merchant: "The Royal Peak Resort"
     title: "The Royal Peak Resort offer"
     value: "35% OFF"
   - merchant: "Earl's Regent Kandy"
     title: "30% OFF on HB & FB Accommodation for Amana Bank Debit Card Holders"
-    value: "30% OFF"
-  - merchant: "Tony Pelle"
-    title: "30% off Instore & Online for Amana Bank Holders"
     value: "30% OFF"
   - merchant: "Earl's Regent Kandy"
     title: "25% OFF on HB & FB Accommodation for Amana Bank Debit Card Holders"
@@ -65,5 +62,8 @@ offers:
     value: "15% OFF"
   - merchant: "Ceylon City Mart- Hidayath"
     title: "15% discount on the Bill for the Fashion and Retail sections (1st, 2nd, & 3rd floors) for Amana Bank Debit card holders."
+    value: "15% OFF"
+  - merchant: "Crazy Jets"
+    title: "15% off on the base fare for Amana Bank Debit Card Holders"
     value: "15% OFF"
 ---
