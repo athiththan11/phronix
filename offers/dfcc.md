@@ -3,8 +3,8 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-10-02"
-active_count: 176
+updated: "2026-10-03"
+active_count: 177
 offers:
   - merchant: "DragonPass"
     title: "50% Savings on Global Fast Track Access at participating airports at Dragonpass. Offer valid on DFCC Visa Credit Cards and Standard Chartered Visa Credit Cards now serviced by DFCC Bank."
@@ -19,10 +19,10 @@ offers:
     title: "Enjoy 50% OFF airport Fast Track access at participating airports at DragonPass. Offer valid on DFCC Visa Credit Cards and Standard Chartered Visa Credit Cards now serviced by DFCC Bank."
     value: "50% OFF"
   - merchant: "Anantaya Resorts And Spa Chillaw 2"
-    title: "Up to 40% Savings on double & triple room bookings on half board & full board basis stays at Anantaya Resorts & Spa.Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank.pa. pa - Chilaw."
+    title: "Up to 40% Savings on double & triple room bookings on half board & full board basis stays at Anantaya Resorts & Spa.Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
     value: "40% OFF"
   - merchant: "Anantaya Pasikudah"
-    title: "Up to 40% Savings on double & triple room bookings on half board & full board basis stays at Anantaya Resorts & Spa. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank.pa - Pasikudha."
+    title: "Up to 40% Savings on double & triple room bookings on half board & full board basis stays at Anantaya Resorts & Spa. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
     value: "40% OFF"
   - merchant: "Wishing Tree"
     title: "35% Savings at Wishing Tree Boutique Resort on double & triple rooms bookings on half board & full board basis stays. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
