@@ -3,7 +3,7 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-10-03"
+updated: "2026-10-04"
 active_count: 109
 offers:
   - merchant: "The Notary's House"
