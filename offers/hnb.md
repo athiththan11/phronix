@@ -3,8 +3,8 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-10-08"
-active_count: 867
+updated: "2026-10-09"
+active_count: 868
 offers:
   - merchant: "Tudo.LK"
     title: "Up to 70% off on sitewide + Extra 12% off on the total bill at Tudo.LK"
@@ -46,7 +46,7 @@ offers:
     title: "Up to 50% off on BB ,FB & HB basis at Melheim Resorts"
     value: "50% OFF"
   - merchant: "Dilshan Drapers"
-    title: "Up to 50% off on selected curtain & furniture fabrics at Dilshan Drapers"
+    title: "Up to 50% off on selected blinds, curtain & furniture fabrics at Dilshan Drapers"
     value: "50% OFF"
   - merchant: "Premadasa & Co. (Jewellers) NEW"
     title: "Up to 50% off on Jewellery items on display at Premadasa & Co. (Jewellers)"
