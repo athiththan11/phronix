@@ -3,8 +3,8 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-10-09"
-active_count: 229
+updated: "2026-10-10"
+active_count: 228
 offers:
   - merchant: "Damansara Specialist Hospital"
     title: "10% Savings on in-patient room rates and board, 50% on embryo freezing, and Visa cardholders can receive 2-for-1 on cardio screening packages at Damansara Specialist Hospital. Offer valid on DFCC Visa Credit Cards and Standard Chartered Visa Credit Cards now serviced by DFCC Bank."

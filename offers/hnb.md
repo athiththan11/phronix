@@ -3,7 +3,7 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-10-09"
+updated: "2026-10-10"
 active_count: 868
 offers:
   - merchant: "Tudo.LK"
