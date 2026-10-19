@@ -3,8 +3,8 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-10-18"
-active_count: 225
+updated: "2026-10-19"
+active_count: 224
 offers:
   - merchant: "Dragonpass"
     title: "Enjoy 50% OFF airport Fast Track access at participating airports at DragonPass. Offer valid on DFCC Visa Credit Cards and Standard Chartered Visa Credit Cards now serviced by DFCC Bank."
