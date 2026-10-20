@@ -3,8 +3,8 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-10-19"
-active_count: 224
+updated: "2026-10-20"
+active_count: 221
 offers:
   - merchant: "Dragonpass"
     title: "Enjoy 50% OFF airport Fast Track access at participating airports at DragonPass. Offer valid on DFCC Visa Credit Cards and Standard Chartered Visa Credit Cards now serviced by DFCC Bank."
@@ -48,9 +48,6 @@ offers:
   - merchant: "Park Street Suites Colombo"
     title: "Enjoy 30% Savings on rates at Park Street Suites, Colombo with DFCC Mastercard Credit Card."
     value: "30% OFF"
-  - merchant: "Aarunya Nature Resort Kandy"
-    title: "Enjoy 30% Savings on rates at Aarunya Nature Resort, Kandy with DFCC Mastercard Credit Card."
-    value: "30% OFF"
   - merchant: "Aavya Cove Villas"
     title: "Enjoy 30% Savings on rates at Aavya Cove Villas with DFCC Mastercard Credit Card."
     value: "30% OFF"
@@ -65,5 +62,8 @@ offers:
     value: "30% OFF"
   - merchant: "Hanboknam"
     title: "30% Savings on Hanbok Rental at Hanboknam. Offer valid on DFCC Visa Credit Cards and Standard Chartered Visa Credit Cards now serviced by DFCC Bank."
+    value: "30% OFF"
+  - merchant: "Grab Transport"
+    title: "Get 30% off per ride for payment made by Visa card issued outside of Thailand."
     value: "30% OFF"
 ---
