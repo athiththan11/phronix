@@ -3,7 +3,7 @@ layout: bank-offers
 title: "Amana Card Offers Today"
 description: "Every active Amana card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Amana"
-updated: "2026-10-23"
+updated: "2026-10-24"
 active_count: 74
 offers:
   - merchant: "Skechers"

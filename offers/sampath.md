@@ -3,7 +3,7 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-10-23"
+updated: "2026-10-24"
 active_count: 128
 offers:
   - merchant: "Uber Lanka (Pvt) Ltd"
