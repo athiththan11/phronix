@@ -3,8 +3,8 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-10-24"
-active_count: 963
+updated: "2026-10-25"
+active_count: 962
 offers:
   - merchant: "Tudo.LK"
     title: "Up to 70% off on sitewide + Extra 12% off on the total bill at Tudo.LK"
@@ -42,9 +42,6 @@ offers:
   - merchant: "Taco Bell"
     title: "50% off on total bill above LKR 4,000 @ Taco Bell"
     value: "50% OFF"
-  - merchant: "Fox Jaffna"
-    title: "Up to 50% off on Room only basis at Fox Jaffna"
-    value: "50% OFF"
   - merchant: "Melheim Resorts"
     title: "Up to 50% off on BB ,FB & HB basis at Melheim Resorts"
     value: "50% OFF"
@@ -53,6 +50,9 @@ offers:
     value: "50% OFF"
   - merchant: "Harmony Haven Udawalawa"
     title: "50% off on BB, HB & FB basis at Harmony Haven Udawalawa"
+    value: "50% OFF"
+  - merchant: "Fox Jaffna"
+    title: "Up to 50% off on Room only basis at Fox Jaffna"
     value: "50% OFF"
   - merchant: "Harmony Haven Udawalawa"
     title: "50% off on FB basis at Harmony Haven Udawalawa"
