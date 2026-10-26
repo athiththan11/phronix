@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Seylan Card Offers Today"
 description: "Every active Seylan card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Seylan"
-updated: "2026-10-25"
-active_count: 363
+updated: "2026-10-26"
+active_count: 359
 offers:
   - merchant: "UBER EATS"
     title: "New Uber Eats users get 65% OFF the first two orders, up to LKR 650, with a minimum spend of LK1000..."
