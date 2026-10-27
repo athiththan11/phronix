@@ -3,8 +3,8 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-10-26"
-active_count: 962
+updated: "2026-10-27"
+active_count: 974
 offers:
   - merchant: "Tudo.LK"
     title: "Up to 70% off on sitewide + Extra 12% off on the total bill at Tudo.LK"
@@ -48,6 +48,12 @@ offers:
   - merchant: "Pizza Hut New"
     title: "50% off on total bill above LKR 4,000 @ Pizza Hut"
     value: "50% OFF"
+  - merchant: "The Blue Water Hotel & Spa, Wadduwa - Seven Seas Restaurant"
+    title: "Up to 50% off on dine-in for up to 10 pax basis at Seven Seas Restaurant"
+    value: "50% OFF"
+  - merchant: "The Blue Water Hotel & Spa, Wadduwa - Seven Seas Restaurant"
+    title: "Up to 50% off on dine-in for up to 10 pax basis at Seven Seas Restaurant"
+    value: "50% OFF"
   - merchant: "Harmony Haven Udawalawa"
     title: "50% off on BB, HB & FB basis at Harmony Haven Udawalawa"
     value: "50% OFF"
@@ -60,10 +66,4 @@ offers:
   - merchant: "Hunas Falls"
     title: "Up to 45% off on HB & FB basis at HUNAS FALLS - Kandy"
     value: "45% OFF"
-  - merchant: "Hunter & Company PLC"
-    title: "Up to 40% off on selected products at Hunters & Company"
-    value: "40% OFF"
-  - merchant: "Fox Jaffna"
-    title: "Up to 40% off on Room only basis at Fox Jaffna"
-    value: "40% OFF"
 ---
