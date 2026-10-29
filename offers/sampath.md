@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-10-28"
-active_count: 125
+updated: "2026-10-29"
+active_count: 124
 offers:
   - merchant: "The Notary's House"
     title: "For all Sampath Mastercard & Visa Credit Cards."
@@ -39,11 +39,11 @@ offers:
   - merchant: "Newburgh Ella"
     title: "For All Sampath Bank Visa Infinite Metal, Visa Infinite, Visa Signature, Mastercard World Credit Cardholders and Sampath Bank American Express® Platinum Ultramiles Cardmembers"
     value: "40% OFF"
-  - merchant: "Amaara Sky Hotel"
-    title: "For all Sampath Mastercard and Visa Credit Cards."
-    value: "40% OFF"
   - merchant: "Hotel Alakamanda"
     title: "For all Sampath Mastercard, Visa Credit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
+    value: "40% OFF"
+  - merchant: "Amaara Sky Hotel"
+    title: "For all Sampath Mastercard and Visa Credit Cards."
     value: "40% OFF"
   - merchant: "Royal Beach Hotel Hikkaduwa"
     title: "For all Sampath Mastercard and Visa Credit Cards."
