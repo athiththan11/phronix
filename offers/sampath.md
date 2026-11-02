@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-11-01"
-active_count: 67
+updated: "2026-11-02"
+active_count: 69
 offers:
   - merchant: "Ravana Garden"
     title: "For all Sampath Mastercard, Visa Credit/Debit Cardholders and Sampath Bank American Express® Platinum Ultramiles Credit Cardmembers."
@@ -63,7 +63,7 @@ offers:
   - merchant: "The Radh"
     title: "For all Sampath Mastercard Credit and Debit Cards"
     value: "30% OFF"
-  - merchant: "Candella house"
-    title: "For Sampath Visa Infinite, Visa Signature,Visa Platinum, Mastercard World Credit Cards and Sampath Bank American Express® Platinum Ultramiles Credit Cards."
+  - merchant: "Atulya Villas"
+    title: "For all Sampath Mastercard and Visa Credit Cards."
     value: "25% OFF"
 ---
