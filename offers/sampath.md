@@ -3,7 +3,7 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-11-02"
+updated: "2026-11-03"
 active_count: 69
 offers:
   - merchant: "Ravana Garden"
@@ -33,6 +33,9 @@ offers:
   - merchant: "Hotel Sudu Araliya"
     title: "For all Sampath Mastercard, Visa Credit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
     value: "35% OFF"
+  - merchant: "The Habitat by Asia Leisure"
+    title: "For all Sampath Mastercard, Visa Credit/Debit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
+    value: "35% OFF"
   - merchant: "Oak Ray Hotels & Resorts"
     title: "For all Sampath Mastercard, Visa Credit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
     value: "35% OFF"
@@ -40,9 +43,6 @@ offers:
     title: "For all Sampath Mastercard and Visa Credit/Debit Cards."
     value: "35% OFF"
   - merchant: "Tamarind Hill"
-    title: "For all Sampath Mastercard, Visa Credit/Debit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
-    value: "35% OFF"
-  - merchant: "The Habitat by Asia Leisure"
     title: "For all Sampath Mastercard, Visa Credit/Debit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
     value: "35% OFF"
   - merchant: "Amaya Lake Dambulla"
