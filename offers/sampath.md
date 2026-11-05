@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-11-04"
-active_count: 127
+updated: "2026-11-05"
+active_count: 128
 offers:
   - merchant: "Ravana Garden"
     title: "For all Sampath Mastercard, Visa Credit/Debit Cardholders and Sampath Bank American Express® Platinum Ultramiles Credit Cardmembers."
