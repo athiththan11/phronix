@@ -2,8 +2,8 @@ title: Phronix
 description: >-
   Phronix tells you which of your cards gives the biggest saving at any
   Sri Lankan merchant — before you tap or swipe.
-url: "https://athiththan11.github.io"
-baseurl: "/phronix"
+url: "https://phronix.lk"
+baseurl: ""
 markdown: kramdown
 kramdown:
   input: GFM
