@@ -3,7 +3,7 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-11-06"
+updated: "2026-11-07"
 active_count: 928
 offers:
   - merchant: "Tudo.LK"
@@ -27,11 +27,11 @@ offers:
   - merchant: "Dilshan Drapers"
     title: "Up to 50% off on selected blinds, curtain & furniture fabrics at Dilshan Drapers"
     value: "50% OFF"
-  - merchant: "Wimaladharma & Sons"
-    title: "Up to 50% off on selected Watches at Wimaladharma & Sons"
-    value: "50% OFF"
   - merchant: "Harmony Haven Udawalawa"
     title: "50% off on BB, HB & FB basis at Harmony Haven Udawalawa"
+    value: "50% OFF"
+  - merchant: "Wimaladharma & Sons"
+    title: "Up to 50% off on selected Watches at Wimaladharma & Sons"
     value: "50% OFF"
   - merchant: "Pizza Hut New"
     title: "50% off on total bill above LKR 4,000 @ Pizza Hut"
