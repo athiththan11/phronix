@@ -3,7 +3,7 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-11-07"
+updated: "2026-11-08"
 active_count: 281
 offers:
   - merchant: "Big deals"
