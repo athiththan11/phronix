@@ -3,7 +3,7 @@ layout: bank-offers
 title: "DFCC Card Offers Today"
 description: "Every active DFCC card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "DFCC"
-updated: "2026-11-08"
+updated: "2026-11-09"
 active_count: 281
 offers:
   - merchant: "Big deals"
@@ -57,11 +57,11 @@ offers:
   - merchant: "Zeneth Collection"
     title: "Up to 35% Savings at Zeneth Collection Properties. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
     value: "35% OFF"
+  - merchant: "Sigiriya.jpg"
+    title: "35% Savings on double & triple room bookings on half board & full board basis stays at Sigiriya King&#x27;s resort By Araliya. Offer valid on DFCC Credit Cards & Standard Chartered Credit Cards now serviced by DFCC Bank."
+    value: "35% OFF"
   - merchant: "Sudu Araliya Polonnaruwa"
     title: "35% Savings on double & triple room bookings on half board & full board basis stays at Sudu Araliya - Polonnaruwa. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
-    value: "35% OFF"
-  - merchant: "Araliya Red Nuwara Eliya"
-    title: "35% Savings on double & triple room bookings on half board & full board basis stays at Araliya Red - Nuwara Eliya. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
     value: "35% OFF"
   - merchant: "PHOTO 2026 02 03 15 44 24"
     title: "35% Savings on double & triple room bookings on full board basis stays at Trio Lodge - Habarana. Offer valid on DFCC Credit Cards and Standard Chartered Credit Cards now serviced by DFCC Bank."
