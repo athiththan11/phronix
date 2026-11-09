@@ -30,9 +30,9 @@ Phronix comes from *phronesis* (φρόνησις) — the Greek word for practic
 
 ## Learn more
 
-- [Website](https://athiththan11.github.io/phronix/)
-- [Privacy Policy](https://athiththan11.github.io/phronix/privacy/)
-- [Terms of Service](https://athiththan11.github.io/phronix/terms/)
+- [Website](https://phronix.lk/)
+- [Privacy Policy](https://phronix.lk/privacy/)
+- [Terms of Service](https://phronix.lk/terms/)
 
 ---
 
