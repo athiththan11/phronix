@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Seylan Card Offers Today"
 description: "Every active Seylan card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Seylan"
-updated: "2026-11-17"
-active_count: 299
+updated: "2026-11-18"
+active_count: 348
 offers:
   - merchant: "Browns"
     title: "Special Discounts upto 50% of on selected products with your Seylan Cards..."
@@ -42,9 +42,6 @@ offers:
   - merchant: "TRIO LODGE,HABARANA"
     title: "35% Off on Room Rate with your Seylan Cards..."
     value: "35% OFF"
-  - merchant: "HAMEEDIA & ENVOY MANSION"
-    title: "Up to 30% off with your Seylan Credit Cards I 10% off for Debit Cards..."
-    value: "30% OFF"
   - merchant: "SPAR VISA INFINITE OFFER"
     title: "Enjoy 30% off on Total Bill with your Seylan Infinite Credit Card..."
     value: "30% OFF"
@@ -54,9 +51,6 @@ offers:
   - merchant: "Keells - Visa Infinite Offer"
     title: "Enjoy 30% off on Total Bill every Saturday with your Seylan Visa Infinite Card..."
     value: "30% OFF"
-  - merchant: "WELLNESSFIX"
-    title: "Up to 30% off with your Seylan Cards..."
-    value: "30% OFF"
   - merchant: "ARALIYA HOTELS"
     title: "30% off on Room Rates for Seylan Credit Cards..."
     value: "30% OFF"
@@ -65,5 +59,11 @@ offers:
     value: "30% OFF"
   - merchant: "GRAND UDAWALAWE SAFARI"
     title: "30% off with your Seylan Credit & Debit Cards...."
+    value: "30% OFF"
+  - merchant: "POWER WORLD"
+    title: "UP TO 30% OFF ON MEMBERSHIP WITH EASY POYMENT PLANS WITH YOUR SEYLAN CARDS..."
+    value: "30% OFF"
+  - merchant: "FOOT RUB"
+    title: "Up to 30% off on Total Bill with your Seylan Credit Cards..."
     value: "30% OFF"
 ---
