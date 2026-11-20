@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-11-19"
-active_count: 167
+updated: "2026-11-20"
+active_count: 166
 offers:
   - merchant: "Toyota Lanka"
     title: "For all Sampath Mastercard & Visa Credit Cards."
