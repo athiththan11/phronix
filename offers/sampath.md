@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Sampath Card Offers Today"
 description: "Every active Sampath card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Sampath"
-updated: "2026-11-22"
-active_count: 165
+updated: "2026-11-23"
+active_count: 166
 offers:
   - merchant: "Toyota Lanka"
     title: "For all Sampath Mastercard & Visa Credit Cards."
@@ -15,9 +15,6 @@ offers:
   - merchant: "Hunas Falls Hotel"
     title: "For all Sampath Mastercard and Visa Credit/Debit Cards."
     value: "45% OFF"
-  - merchant: "Hilton Yala Resort"
-    title: "For All Sampath Bank Visa Infinite Metal and Visa Infinite Credit Cardholders"
-    value: "40% OFF"
   - merchant: "Anantaya Resort and Spa Passikuda"
     title: "For all Sampath Mastercard, Visa Credit/Debit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
     value: "40% OFF"
@@ -44,6 +41,9 @@ offers:
     value: "40% OFF"
   - merchant: "Royal Beach Hotel Hikkaduwa"
     title: "For all Sampath Mastercard,Visa Credit Cards & Sampath Bank American Express® Platinum Ultramiles Credit Cards."
+    value: "40% OFF"
+  - merchant: "Hilton Yala Resort"
+    title: "For All Sampath Bank Visa Infinite Metal and Visa Infinite Credit Cardholders"
     value: "40% OFF"
   - merchant: "Amaya Hills Kandy"
     title: "For all Sampath Mastercard, Visa Credit Cardholders and Sampath Bank American Express® Platinum Ultramiles Credit Cardmembers."
