@@ -3,8 +3,8 @@ layout: bank-offers
 title: "HNB Card Offers Today"
 description: "Every active HNB card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "HNB"
-updated: "2026-11-24"
-active_count: 1022
+updated: "2026-11-25"
+active_count: 1065
 offers:
   - merchant: "Tudo.LK"
     title: "Up to 70% off on sitewide + Extra 12% off on the total bill at Tudo.LK"
@@ -57,13 +57,13 @@ offers:
   - merchant: "Hunas Falls"
     title: "Up to 45% off on HB & FB basis at HUNAS FALLS - Kandy"
     value: "45% OFF"
-  - merchant: "Amaara Forest Hotel - Sigiriya"
-    title: "Up to 40% off on HB & FB basis at Amaara Forest, Sigiriya"
+  - merchant: "Inidi Leisure"
+    title: "40% off on FB basis at Inidi Leisure, Wadduwa"
     value: "40% OFF"
-  - merchant: "Breeze Pasikudah Hotel"
-    title: "Up to 40% off on BB, HB & FB basis at Breeze Pasikudah Hotel"
+  - merchant: "Hunter & Company PLC"
+    title: "Up to 40% off on selected products at Hunters & Company"
     value: "40% OFF"
-  - merchant: "Amaara Sky Hotel, Kandy"
-    title: "Up to 40% off on HB & FB basis at Amaara Sky Hotel, Kandy"
+  - merchant: "Royal Beach Hotel Hikkaduwa"
+    title: "Up to 40% off on BB, FB and HB basis at Royal Beach Hotel Hikkaduwa"
     value: "40% OFF"
 ---
