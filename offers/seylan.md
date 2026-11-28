@@ -3,8 +3,8 @@ layout: bank-offers
 title: "Seylan Card Offers Today"
 description: "Every active Seylan card offer today, ranked by saving. Updated automatically — see which one to use before you pay."
 bank_name: "Seylan"
-updated: "2026-11-27"
-active_count: 317
+updated: "2026-11-28"
+active_count: 354
 offers:
   - merchant: "Browns"
     title: "Special Discounts upto 50% of on selected products with your Seylan Cards..."
